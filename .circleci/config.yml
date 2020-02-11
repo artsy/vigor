@@ -1,0 +1,31 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@1.1.6
+
+jobs:
+  build:
+    executor:
+      name: node/default
+      tag: "12.15.0"
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: yarn install
+      - run: node index.js
+
+workflows:
+  monitor:
+    triggers:
+      - schedule:
+          cron: "0 * * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build
+  build:
+    jobs:
+      - build

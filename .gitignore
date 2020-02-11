@@ -1,0 +1,7 @@
+.*
+!.gitignore
+!.env.example
+!.circleci
+*.log
+*.swp
+node_modules
