@@ -8,9 +8,9 @@ jobs:
     executor: node/build
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: yarn install
+      - run:
+          name: yarn install --production
+          command: yarn install --production
       - run: node index.js
 
 workflows:
