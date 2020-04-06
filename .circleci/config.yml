@@ -1,13 +1,11 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@1.1.6
+  node: artsy/node@1.0.0
 
 jobs:
   build:
-    executor:
-      name: node/default
-      tag: "12.15.0"
+    executor: node/build
     steps:
       - checkout
       - node/with-cache:
