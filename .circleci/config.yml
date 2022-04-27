@@ -1,11 +1,9 @@
 version: 2.1
 
-orbs:
-  node: artsy/node@1.0.0
-
 jobs:
   build:
-    executor: node/build
+    docker:
+      - image: cimg/node:14.18.1
     steps:
       - checkout
       - run:
