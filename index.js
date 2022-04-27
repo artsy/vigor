@@ -87,7 +87,7 @@ A new version of *${process.env.PACKAGE_NAME}* was just published! (${latestVers
 console.log("CIRCLE_BRANCH", process.env.CIRCLE_BRANCH)
 console.log("NODE_ENV", process.env.NODE_ENV)
 if (
-  process.env.CIRCLE_BRANCH === "master" ||
+  process.env.CIRCLE_BRANCH === "main" ||
   process.env.NODE_ENV === "development"
 ) {
   run()
