@@ -15,7 +15,7 @@
   "dependencies": {
     "luxon": "^1.28.1",
     "node-fetch": "^2.6.7",
-    "semver": "^7.1.2"
+    "semver": "^7.5.2"
   },
   "prettier": {
     "semi": false,
